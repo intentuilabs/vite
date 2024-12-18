@@ -1,12 +1,14 @@
 import {
-  isRouteErrorResponse,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
 } from "react-router";
 
+import AppNavbar from "~/components/app-navbar";
+import { Providers } from "~/components/providers";
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 
@@ -33,10 +35,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+      <body className="font-sans antialiased tracking-tight">
+        <Providers>
+          <AppNavbar />
+          <main className="py-4 sm:py-12">{children}</main>
+          <ScrollRestoration />
+          <Scripts />
+        </Providers>
       </body>
     </html>
   );
@@ -54,20 +59,18 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? "404" : "Error";
     details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
+      error.status === 404 ? "The requested page could not be found." : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
     stack = error.stack;
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className="container p-4 pt-16 mx-auto">
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre className="overflow-x-auto p-4 w-full">
           <code>{stack}</code>
         </pre>
       )}

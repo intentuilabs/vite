@@ -1,13 +1,13 @@
+import { Container } from "ui";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Home | Justd SK" },
+    { name: "description", content: "Welcome to Justd Vite Starter Kit" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <Container>Home</Container>;
 }
