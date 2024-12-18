@@ -26,10 +26,8 @@ function ThemeProvider({
   storageKey = "iut",
   ...props
 }: ThemeProviderProps) {
-  // Add a check for `typeof window !== 'undefined'` to ensure we're on the client
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
-      // Safely access localStorage only on the client side
       return (localStorage?.getItem(storageKey) as Theme) || defaultTheme;
     }
     return defaultTheme;
@@ -72,9 +70,7 @@ function ThemeProvider({
 
 const useTheme = () => {
   const context = use(ThemeProviderContext);
-
   if (context === undefined) throw new Error("useTheme must be used within a ThemeProvider");
-
   return context;
 };
 
