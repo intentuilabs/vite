@@ -1,5 +1,3 @@
-"use client";
-
 import { createContext, use, useCallback, useId, useMemo, useState } from "react";
 
 import { IconHamburger } from "justd-icons";
