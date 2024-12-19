@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09785403-db9a-46ee-81bf-1b1fb6c61f0b" name="Changes" comment="" />
+    <list default="true" id="09785403-db9a-46ee-81bf-1b1fb6c61f0b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +76,7 @@
       <workItem from="1734518470726" duration="125000" />
       <workItem from="1734518602779" duration="2682000" />
       <workItem from="1734521541633" duration="72000" />
+      <workItem from="1734603247152" duration="307000" />
     </task>
     <servers />
   </component>
