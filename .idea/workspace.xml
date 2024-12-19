@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09785403-db9a-46ee-81bf-1b1fb6c61f0b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/components/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/theme-provider.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="09785403-db9a-46ee-81bf-1b1fb6c61f0b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,18 +13,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "irsyadadl"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;irsyadadl&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/justdlabs/vite.git",
-    "accountId": "7d699158-95ee-42d2-ab6d-812ca854fb6b"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/justdlabs/vite.git&quot;,
+    &quot;accountId&quot;: &quot;7d699158-95ee-42d2-ab6d-812ca854fb6b&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
