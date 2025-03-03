@@ -7,7 +7,7 @@
     "dev": "react-router dev",
     "start": "cross-env NODE_ENV=production react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "format": "bun run lint && biome check --write",
+    "format": "biome lint --fix ./app && biome check --write ./app",
     "format:unsafe": "biome check --unsafe --write"
   },
   "dependencies": {
