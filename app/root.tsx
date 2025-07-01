@@ -1,16 +1,8 @@
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  isRouteErrorResponse,
-} from "react-router";
+import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router"
 
-import AppNavbar from "~/components/app-navbar";
-import { Providers } from "~/components/providers";
-import type { Route } from "./+types/root";
-import stylesheet from "./app.css?url";
+import { Providers } from "~/components/providers"
+import type { Route } from "./+types/root"
+import stylesheet from "./app.css?url"
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,7 +16,7 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
   { rel: "stylesheet", href: stylesheet },
-];
+]
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -35,45 +27,44 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans antialiased tracking-tight">
+      <body className="font-sans tracking-tight antialiased">
         <Providers>
-          <AppNavbar />
           <main className="py-4 sm:py-12">{children}</main>
           <ScrollRestoration />
           <Scripts />
         </Providers>
       </body>
     </html>
-  );
+  )
 }
 
 export default function App() {
-  return <Outlet />;
+  return <Outlet />
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
+  let message = "Oops!"
+  let details = "An unexpected error occurred."
+  let stack: string | undefined
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message = error.status === 404 ? "404" : "Error"
     details =
-      error.status === 404 ? "The requested page could not be found." : error.statusText || details;
+      error.status === 404 ? "The requested page could not be found." : error.statusText || details
   } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
+    details = error.message
+    stack = error.stack
   }
 
   return (
-    <main className="container p-4 pt-16 mx-auto">
+    <main className="container mx-auto p-4 pt-16">
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className="overflow-x-auto p-4 w-full">
+        <pre className="w-full overflow-x-auto p-4">
           <code>{stack}</code>
         </pre>
       )}
     </main>
-  );
+  )
 }

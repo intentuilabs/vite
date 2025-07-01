@@ -1,10 +1,5 @@
-import { Container } from "ui";
-import type { Route } from "./+types/home";
-
-export function meta({}: Route.MetaArgs) {
-  return [{ title: "About | Justd SK" }];
-}
+import { Container } from "~/components/ui/container"
 
 export default function About() {
-  return <Container>About</Container>;
+  return <Container>About</Container>
 }
